@@ -2,7 +2,7 @@ from binance.client import Client
 import time
 
 # Binance API credentials
-API_KEY = 'jRdzAwKs9AqqZQEdVHHKDRcrfMmJISsBcZa9PwZ38mrpCfGBCLr6hgCwSBf3dfoA'
+API_KEY = 'YOUR API KEY'
 client = Client(API_KEY)
 
 # Symbols and their target prices
