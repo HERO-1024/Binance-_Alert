@@ -5,14 +5,21 @@ import time
 API_KEY = 'YOUR API KEY'
 client = Client(API_KEY)
 
-# Symbols and their target prices
-targets = {
-    'BTCUSDT': 911150.8,
-    'BNBUSDT': 612.60,
-    'ETHUSDT': 1802.00,
-    'SOLUSDT': 152.40
-}
+# List of symbols to monitor
+symbols = ['BTCUSDT', 'BNBUSDT', 'ETHUSDT', 'SOLUSDT']
 
+# Ask user to input target prices
+targets = {}
+print("🔧 Set your target prices for each symbol:")
+
+for symbol in symbols:
+    while True:
+        try:
+            user_input = input(f"Enter target price for {symbol}: ")
+            targets[symbol] = float(user_input)
+            break
+        except ValueError:
+            print("⚠️ Please enter a valid number.")
 def check_price():
     while True:
         try:
